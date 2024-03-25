@@ -24,7 +24,7 @@
     </header>
 
     <main class="container" style="max-width: 800px">
-      <form action="" class="d-flex">
+      <form action="" class="d-flex gap-2">
         <input
           id="gelir-input"
           class="form-control"
@@ -47,11 +47,12 @@
             class="form-control"
             id="harcama-alani"
             placeholder="Manav, Bakkal, Fatura"
+            required
           />
         </div>
         <div class="col-6">
           <label for="tarih" class="form-label">Tarih</label>
-          <input type="date" class="form-control" id="tarih" />
+          <input type="date" class="form-control" id="tarih" required />
         </div>
         <div class="col-12">
           <label for="miktar" class="form-label">Harcanan Miktar</label>
@@ -60,11 +61,14 @@
             class="form-control"
             id="miktar"
             placeholder="1000 tl"
+            required
           />
         </div>
 
         <div class="col-12 text-center">
-          <button type="submit" class="btn btn-warning">Sign in</button>
+          <button type="submit" id="kaydet" class="btn btn-warning">
+            Kaydet
+          </button>
         </div>
       </form>
 
@@ -89,6 +93,29 @@
           </tr> -->
         </tbody>
       </table>
+
+      <table
+        id="sonuc-tablosu"
+        class="table table-bordered table-hover table-striped mt-4 text-center w-50 ms-auto"
+      >
+        <tbody class="text-end">
+          <tr>
+            <th>Geliriniz:</th>
+            <td id="geliriniz">0</td>
+          </tr>
+          <tr>
+            <th>Gideriniz:</th>
+            <td id="gideriniz">0</td>
+          </tr>
+          <tr>
+            <th>Kalan:</th>
+            <td id="kalan">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <section class="text-center">
+        <button class="btn btn-warning">Bilgileri Temizle</button>
+      </section>
     </main>
 
     <script src="app.js"></script>
